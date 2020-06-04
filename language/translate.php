@@ -29,7 +29,9 @@ if(isset($_GET["language"]) && in_array($_GET["language"], $supported_languages)
 {
     $_SESSION["language"] = $_GET["language"];
     include_once __DIR__ . '/'.$_SESSION["language"].'.php';
-}else {
+}
+else
+{
     /**
      * Do contrario, verifica se ha 
      * algum idioma em secao
@@ -38,7 +40,9 @@ if(isset($_GET["language"]) && in_array($_GET["language"], $supported_languages)
     if(isset($_SESSION["language"]))
     {
         include_once __DIR__ . '/'.$_SESSION["language"].'.php';
-    }else{
+    }
+    else
+    {
         /**
          * Do contrario, seta o idioma padrao
          * e usa o idioma padrao
