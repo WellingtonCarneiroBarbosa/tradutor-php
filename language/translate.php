@@ -19,7 +19,7 @@ if( ! isset($_GET['language']) )
  * é suportado pela aplicacao
  * 
  */
-else if(isset($_GET['language']) && $_GET['language'] == 'pt-br' || $_GET['language'] == 'en-us')
+else if($_GET['language'] == 'pt-br' || $_GET['language'] == 'en-us')
 {
     /**
      * Se for valido, muda
