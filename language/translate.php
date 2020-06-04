@@ -44,8 +44,7 @@ else
     else
     {
         /**
-         * Do contrario, seta o idioma padrao
-         * e usa o idioma padrao
+         * Do contrario, usa o idioma padrao
          * 
          */
         $_SESSION["language"] = $default_language;
