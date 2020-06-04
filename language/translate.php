@@ -6,6 +6,12 @@
  * 
  */
 
+/**
+ * Idiomas suportados
+ * 
+ */
+$supported_languages = array("pt-br", "en-us");
+
 if( ! isset($_GET['language']) )
 {
     /**
@@ -19,7 +25,7 @@ if( ! isset($_GET['language']) )
  * é suportado pela aplicacao
  * 
  */
-else if($_GET['language'] == 'pt-br' || $_GET['language'] == 'en-us')
+else if(in_array($_GET['language'], $supported_languages))
 {
     /**
      * Se for valido, muda
