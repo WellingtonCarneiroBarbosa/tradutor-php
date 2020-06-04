@@ -1,12 +1,10 @@
 <?php 
 /**
- * As keywords serão as palavras
- * usadas para realizar a tradução.
- * 
- * @Return array;
+ * As keywords serão os indices
+ * usados para realizar a tradução.
  * 
  */
 $keyword = [
     "title" => "Olá Mundo!",
-    "subtitle" => "Este é meu website bilíngue!",
+    "subtitle" => "Este é meu website multi idiomas!",
 ];

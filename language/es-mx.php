@@ -1,10 +1,10 @@
-<?php
+<?php 
 /**
  * As keywords serão os indices
  * usados para realizar a tradução.
  * 
  */
 $keyword = [
-    "title" => "Hello World!",
-    "subtitle" => "This is my  multilingual website!",
+    "title" => "Hola mundo!",
+    "subtitle" => "Este es mi sitio web multilingüe!",
 ];

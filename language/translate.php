@@ -11,7 +11,7 @@ session_start();
  * Idiomas suportados
  * 
  */
-$supported_languages = array("pt-br", "en-us");
+$supported_languages = array("pt-br", "en-us", "es-mx");
 
 /**
  * Idioma padrao

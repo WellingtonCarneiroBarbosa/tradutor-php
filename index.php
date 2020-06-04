@@ -15,5 +15,6 @@
     <br>
     <a href="?language=pt-br">Portugues</a>
     <a href="?language=en-us">Ingles</a>
+    <a href="?language=es-mx">Espanhol</a>
 </body>
 </html>
