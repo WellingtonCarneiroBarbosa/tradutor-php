@@ -1,4 +1,5 @@
 <?php 
+session_start();
 /**
  * Este arquivo realiza o controle
  * sobre qual keyword deverá ser usada
@@ -12,34 +13,40 @@
  */
 $supported_languages = array("pt-br", "en-us");
 
-if( ! isset($_GET['language']) )
-{
-    /**
-     * Usa as keywords em portugues
-     * 
-     */
-    include_once __DIR__ . '/pt-br.php';
-}
 /**
- * Verifica se o idioma solicitado
- * é suportado pela aplicacao
+ * Idioma padrao
  * 
  */
-else if(in_array($_GET['language'], $supported_languages))
+$default_language = "pt-br";
+
+/**
+ * Caso seja solicitado a troca
+ * e o idioma for valido, salva em
+ * secao e muda o idioma
+ * 
+ */
+if(isset($_GET["language"]) && in_array($_GET["language"], $supported_languages))
 {
+    $_SESSION["language"] = $_GET["language"];
+    include_once __DIR__ . '/'.$_SESSION["language"].'.php';
+}else {
     /**
-     * Se for valido, muda
+     * Do contrario, verifica se ha 
+     * algum idioma em secao
      * 
      */
-    include_once __DIR__ . '/'.$_GET['language'].'.php';
+    if(isset($_SESSION["language"]))
+    {
+        include_once __DIR__ . '/'.$_SESSION["language"].'.php';
+    }else{
+        /**
+         * Do contrario, seta o idioma padrao
+         * e usa o idioma padrao
+         * 
+         */
+        $_SESSION["language"] = $default_language;
+        include_once __DIR__ . '/'.$_SESSION["language"].'.php';
+    }
 }
-else
-{
-    /**
-     * Do contrario, usa como padrao
-     * o portugues
-     * 
-     */
-    include_once __DIR__ . '/pt-br.php';
-}
+
 ?>
